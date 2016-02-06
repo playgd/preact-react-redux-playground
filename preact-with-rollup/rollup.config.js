@@ -7,7 +7,7 @@ import npm from 'rollup-plugin-npm'
 export default {
   entry: 'src/main.js',
   format: 'umd',
-  moduleName: 'test',
+  moduleName: 'preactPlayground',
   plugins: [
     json(),
     babel(),
