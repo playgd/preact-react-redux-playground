@@ -2,7 +2,7 @@
 
 import { h } from 'preact'
 
-const App = ({
+const Counter = ({
   value,
   onIncrement,
   onDecrement
@@ -14,4 +14,4 @@ const App = ({
   </div>
 )
 
-export default App
+export default Counter
