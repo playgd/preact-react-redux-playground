@@ -1,30 +1,37 @@
 'use strict'
 
-import preact, { h } from 'preact'
+import preact, { h, Component } from 'preact'
 import { createStore } from 'redux'
-import App from './components/app'
+import Counter from './components/counter'
 import counter from './reducers/counter'
 
 const store = createStore(counter)
 
-const onIncrement = () => {
-  store.dispatch({ type: 'INCREMENT' })
+class Main extends Component {
+  constructor() {
+    super()
+    this.state.value = store.getState()
+  }
+
+  onIncrement() {
+    store.dispatch({ type: 'INCREMENT' })
+    this.setState({ value: store.getState() })
+  }
+
+  onDecrement() {
+    store.dispatch({ type: 'DECREMENT' })
+    this.setState({ value: store.getState() })
+  }
+
+  render() {
+    return (
+      <Counter
+        value={this.state.value}
+        onIncrement={this.onIncrement.bind(this)}
+        onDecrement={this.onDecrement.bind(this)}
+      />
+    )
+  }
 }
 
-const onDecrement = () => {
-  store.dispatch({ type: 'DECREMENT' })
-}
-
-const render = () => {
-  preact.render(
-    <App
-      value={store.getState()}
-      onIncrement={onIncrement}
-      onDecrement={onDecrement}
-    />,
-    document.querySelector('[data-js="main"]')
-  )
-}
-
-store.subscribe(render)
-render()
+preact.render(<Main />, document.querySelector('[data-js="main"]'))
