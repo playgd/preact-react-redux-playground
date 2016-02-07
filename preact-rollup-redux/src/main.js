@@ -7,9 +7,21 @@ import counter from './reducers/counter'
 
 const store = createStore(counter)
 
+const onIncrement = () => {
+  store.dispatch({ type: 'INCREMENT' })
+}
+
+const onDecrement = () => {
+  store.dispatch({ type: 'DECREMENT' })
+}
+
 const render = () => {
   preact.render(
-    <App value={store.getState()} />,
+    <App
+      value={store.getState()}
+      onIncrement={onIncrement}
+      onDecrement={onDecrement}
+    />,
     document.querySelector('[data-js="main"]')
   )
 }
