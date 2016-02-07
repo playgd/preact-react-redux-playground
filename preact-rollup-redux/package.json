@@ -7,7 +7,8 @@
     "rollup-plugin-babel": "^2.3.9",
     "babel-plugin-transform-react-jsx": "^6.4.0",
     "babel-preset-es2015-rollup": "^1.1.1",
-    "rollup-plugin-npm": "^1.4.0"
+    "rollup-plugin-npm": "^1.4.0",
+    "babel-plugin-transform-node-env-inline": "^6.3.13"
   },
   "dependencies": {
     "preact": "^2.8.3",

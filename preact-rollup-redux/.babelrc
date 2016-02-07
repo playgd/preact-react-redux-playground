@@ -1,6 +1,7 @@
 {
   "presets": ["es2015-rollup"],
   "plugins": [
+    "transform-node-env-inline",
     ["transform-react-jsx", { "pragma": "h" }]
   ]
 }
