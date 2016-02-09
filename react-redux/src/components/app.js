@@ -1,18 +1,16 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { createStore } from 'redux'
 import Counter from './counter'
-import counter from '../reducers/counter'
-
-const store = createStore(counter)
 
 class App extends Component {
   componentDidMount() {
+    const { store } = this.context
     store.subscribe(() => this.forceUpdate())
   }
 
   render() {
+    const { store } = this.context
     const counters = store.getState()
 
     return (
@@ -49,6 +47,10 @@ class App extends Component {
       </div>
     )
   }
+}
+
+App.contextTypes = {
+  store: React.PropTypes.object
 }
 
 export default App
