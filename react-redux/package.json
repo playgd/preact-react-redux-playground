@@ -2,7 +2,7 @@
   "scripts": {
     "start": "webpack -w",
     "test": "mocha --compilers js:babel-register",
-    "build": "UGLIFY=true webpack"
+    "build": "NODE_ENV=production UGLIFY=true webpack"
   },
   "devDependencies": {
     "webpack": "^1.12.13",
