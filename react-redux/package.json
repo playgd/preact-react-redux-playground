@@ -18,6 +18,7 @@
   "dependencies": {
     "react": "^0.14.7",
     "redux": "^3.3.1",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0"
   }
 }
