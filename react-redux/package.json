@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "webpack -w",
+    "test": "mocha --compilers js:babel-register",
+    "build": "UGLIFY=true webpack"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.13",
+    "babel-loader": "^6.2.2",
+    "babel-core": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "uglify-loader": "^1.3.0",
+    "babel-register": "^6.5.1",
+    "chai": "^3.5.0"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "redux": "^3.3.1",
+    "react-dom": "^0.14.7"
+  }
+}
