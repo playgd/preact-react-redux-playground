@@ -6,7 +6,7 @@ import Counter from './counter'
 class App extends Component {
   componentDidMount() {
     const { store } = this.context
-    store.subscribe(() => this.forceUpdate())
+    store.subscribe(() => this.setState({}))
   }
 
   render() {
