@@ -23,10 +23,11 @@ module.exports = {
 
     return [
       new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      })
+        compressor: { warnings: false },
+        output: { comments: false }
+      }),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.OccurenceOrderPlugin()
     ]
   })()
 }
