@@ -18,10 +18,17 @@ module.exports = {
   },
   plugins: (() => {
     if(!process.env.UGLIFY) {
-      return []
+      return [
+         new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('development')
+        })
+      ]
     }
 
     return [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      }),
       new webpack.optimize.UglifyJsPlugin({
         compressor: { warnings: false },
         output: { comments: false }
