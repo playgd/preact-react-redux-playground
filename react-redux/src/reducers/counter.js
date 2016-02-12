@@ -1,7 +1,5 @@
 'use strict'
 
-'use strict'
-
 const counter = (state = [0], action) => {
   switch(action.type) {
     case 'ADD_COUNTER': return addCounter(state)
