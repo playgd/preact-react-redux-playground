@@ -5,8 +5,7 @@ import Counter from './counter'
 
 class App extends Component {
   componentDidMount() {
-    const { store } = this.context
-    store.subscribe(() => this.setState({}))
+    this.context.store.subscribe(() => this.setState({}))
   }
 
   render() {
@@ -16,8 +15,8 @@ class App extends Component {
     return (
       <div>
         {counters.map((value, index) => (
-           <Counter
-           key={index}
+          <Counter
+            key={index}
             value={value}
             onIncrement={() =>
               store.dispatch({ type: 'INCREMENT', index }
