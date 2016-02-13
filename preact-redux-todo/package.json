@@ -2,7 +2,8 @@
   "scripts": {
     "start": "webpack -w",
     "test": "mocha --compilers js:babel-register",
-    "build": "NODE_ENV=production UGLIFY=true webpack"
+    "build": "NODE_ENV=production UGLIFY=true webpack",
+    "deploy": "surge --domain test-preact-redux-todo.surge.sh ./"
   },
   "devDependencies": {
     "webpack": "^1.12.13",
@@ -13,7 +14,8 @@
     "babel-preset-react": "^6.5.0",
     "uglify-loader": "^1.3.0",
     "babel-register": "^6.5.1",
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "surge": "^0.17.7"
   },
   "dependencies": {
     "redux": "^3.3.1",
