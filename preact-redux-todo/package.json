@@ -21,6 +21,8 @@
     "redux": "^3.3.1",
     "react-redux": "^4.4.0",
     "preact-compat": "^0.7.1",
-    "preact": "^3.2.0"
+    "preact": "^3.2.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   }
 }
