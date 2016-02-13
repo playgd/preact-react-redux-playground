@@ -1,7 +1,7 @@
 'use strict'
 import { createStore } from 'redux'
-import todo from './reducers/todo'
+import todos from './reducers/todos'
 
-const store = createStore(todo)
+const store = createStore(todos)
 
 export default store
