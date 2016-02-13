@@ -13,7 +13,10 @@ class App extends Component {
 
     return (
       <div>
-        <button onClick={() => store.dispatch({ type: 'ADD_TODO' })}>
+        <button onClick={() => store.dispatch({
+          type: 'ADD_TODO',
+          text: 'hey'
+        })}>
           Add todo
         </button>
 
