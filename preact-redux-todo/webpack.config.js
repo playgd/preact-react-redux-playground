@@ -38,10 +38,10 @@ module.exports = {
       new webpack.optimize.OccurenceOrderPlugin()
     ]
   })(),
-  resolve: {
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
-  }
+  // resolve: {
+  //   alias: {
+  //     'react': 'preact-compat',
+  //     'react-dom': 'preact-compat'
+  //   }
+  // }
 }
