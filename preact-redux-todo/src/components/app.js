@@ -10,19 +10,25 @@ class App extends Component {
   render() {
     const { store } = this.context
     const todos = store.getState()
+    let input
 
     return (
       <div>
-        <button onClick={() => store.dispatch({
-          type: 'ADD_TODO',
-          text: 'hey'
-        })}>
+        <input ref={(node) => input = node} />
+        <button onClick={() => {
+          store.dispatch({
+            type: 'ADD_TODO',
+            text: input.value
+          })
+          input.value = ''
+          input.focus()
+        }}>
           Add todo
         </button>
 
         <ul>
-          {todos.map(todo => (
-            <li key={todo.id}>{todo.text}</li>
+          {todos.map((todo, index) => (
+            <li key={index}>{todo.text}</li>
           ))}
         </ul>
       </div>
