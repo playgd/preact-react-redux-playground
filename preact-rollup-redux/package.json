@@ -2,7 +2,7 @@
   "scripts": {
     "start": "BABEL_ENV=production nodemon -x \"rollup -c\"",
     "test": "BABEL_ENV=test mocha --compilers js:babel-register",
-    "build": "UGLIFY=true rollup -c"
+    "build": "BABEL_ENV=production UGLIFY=true rollup -c"
   },
   "devDependencies": {
     "babel-plugin-transform-node-env-inline": "^6.3.13",
