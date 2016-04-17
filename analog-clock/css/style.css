@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.clock {
+  border: 1px solid;
+  border-radius: 50%;
+  height: 300px;
+  position: relative;
+  width: 300px;
+}
+
+.clock::before,
+.clock::after,
+.numbers::before,
+.numbers::after,
+.pointers::before,
+.pointers::after {
+  background: #a0a0a0;
+  bottom: 0;
+  content: '';
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+}
+
+.clock::after {
+  transform: rotate(90deg);
+}
+
+.numbers::before {
+  transform: rotate(calc(90deg / 3));
+}
+
+.numbers::after {
+  transform: rotate(calc((90deg / 3) * 2));
+}
+
+.pointers::before {
+  transform: rotate(calc(-90deg / 3));
+}
+
+.pointers::after {
+  transform: rotate(calc((-90deg / 3) * 2));
+}
+
+.numbers,
+.pointers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.number {
+  height: 30px;
+  line-height: 30px;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+}
+
+.number-1 {
+  right: 22.5%;
+  top: 6.25%;
+}
+
+.number-2 {
+  right: 6.25%;
+  top: 22.5%;
+}
+
+.number-3 {
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+.number-4 {
+  right: 6.25%;
+  bottom: 22.5%;
+}
+
+.number-5 {
+  right: 22.5%;
+  bottom: 6.25%;
+}
+
+.number-6 {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+}
+
+.number-7 {
+  left: 22.5%;
+  bottom: 6.25%;
+}
+
+.number-8 {
+  left: 6.25%;
+  bottom: 22.5%;
+}
+
+.number-9 {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  top: 0;
+}
+
+.number-10 {
+  left: 6.25%;
+  top: 22.5%;
+}
+
+.number-11 {
+  left: 22.5%;
+  top: 6.25%;
+}
+
+.number-12 {
+  left: 0;
+  margin: auto;
+  top: 0;
+  right: 0;
+}
