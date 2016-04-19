@@ -4,7 +4,7 @@
 
 ## Up and running
 
-```console
+```sh
 # Install dependencies
 $ npm install
 
