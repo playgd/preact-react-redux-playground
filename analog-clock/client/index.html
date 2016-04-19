@@ -8,10 +8,10 @@
   <body>
     <div data-js="main"></div>
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
     <script>
-      System.import('js/main.js')
+      System.import('/js/main.js')
         .then(() => console.log('ok'))
         .catch((err) => console.log('err', err))
     </script>
