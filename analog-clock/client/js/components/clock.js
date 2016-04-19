@@ -13,7 +13,7 @@ class Clock extends Component {
     return (360 * time) / value
   }
 
-  componentWillMount () {
+  getInitialData () {
     const date = new Date()
     const hour = date.getHours()
     const minutes = date.getMinutes()
@@ -21,25 +21,16 @@ class Clock extends Component {
     const hourDeg = this.convertToDegrees('hour', hour)
     const minutesDeg = this.convertToDegrees('minutes', minutes)
     const secondsDeg = this.convertToDegrees('seconds', seconds)
-    this.setState({
-      hour, minutes, seconds,
-      hourDeg, minutesDeg, secondsDeg
-    })
+    return { hour, minutes, seconds, hourDeg, minutesDeg, secondsDeg }
+  }
+
+  componentWillMount () {
+    this.setState(this.getInitialData())
   }
 
   componentDidMount () {
     this.interval = setInterval(() => {
-      const date = new Date()
-      const hour = date.getHours()
-      const minutes = date.getMinutes()
-      const seconds = date.getSeconds()
-      const hourDeg = this.convertToDegrees('hour', hour)
-      const minutesDeg = this.convertToDegrees('minutes', minutes)
-      const secondsDeg = this.convertToDegrees('seconds', seconds)
-      this.setState({
-        hour, minutes, seconds,
-        hourDeg, minutesDeg, secondsDeg
-      })
+      this.setState(this.getInitialData())
     }, 1000)
   }
 
@@ -52,8 +43,6 @@ class Clock extends Component {
       hour, minutes, seconds,
       hourDeg, minutesDeg, secondsDeg
     } = this.state
-
-    console.log('%s:%s:%s', hour, minutes, seconds)
 
     return (
       <div className='clock'>
