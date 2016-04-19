@@ -1,6 +1,8 @@
 {
+  "name": "analog-clock",
   "scripts": {
-    "start": "python -m SimpleHTTPServer 9001",
+    "postinstall": "jspm install -y",
+    "start": "node app.js",
     "lint": "standard --verbose | snazzy",
     "watch:js": "jspm -w",
     "watch": "concurrently --kill-others 'npm run lint' 'npm run watch:js'"
@@ -11,7 +13,13 @@
     "snazzy": "^3.0.1",
     "standard": "^6.0.8"
   },
+  "dependencies": {
+    "express": "^4.13.4"
+  },
   "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
     "dependencies": {
       "react": "npm:preact-compat@^1.7.0",
       "react-dom": "npm:preact-compat@^1.7.0"
