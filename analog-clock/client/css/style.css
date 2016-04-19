@@ -5,6 +5,13 @@
   padding: 0;
 }
 
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
 .clock {
   border: 1px solid;
   border-radius: 50%;
