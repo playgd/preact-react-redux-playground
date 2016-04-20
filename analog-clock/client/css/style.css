@@ -9,6 +9,7 @@ body {
   align-items: center;
   display: flex;
   height: 100vh;
+  font: 14px sans-serif;
   justify-content: center;
 }
 
