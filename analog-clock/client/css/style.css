@@ -14,7 +14,7 @@ body {
 }
 
 .clock {
-  border: 1px solid;
+  border: 5px solid;
   border-radius: 50%;
   height: 300px;
   position: relative;
@@ -79,8 +79,6 @@ body {
   width: 15px;
   z-index: 1;
 }
-
-
 
 .number {
   height: 30px;
