@@ -9,11 +9,25 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
-    "jspm": "^0.16.3",
+    "jspm": "^0.16.33",
     "snazzy": "^3.0.1",
     "standard": "^6.0.8"
   },
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
+    "dependencies": {
+      "react": "npm:preact-compat@^1.7.0",
+      "react-dom": "npm:preact-compat@^1.7.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
